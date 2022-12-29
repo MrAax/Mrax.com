@@ -1,0 +1,51 @@
+@media screen and (min-width:970px){
+    /* if media screen > 970px then what you do!  */
+
+}
+@media screen and (max-width:1069px){
+    .div1 .leftside {margin: 20px 10px; overflow-wrap: normal;}
+}
+
+@media screen and (max-width:1010px){
+    #menu {flex-direction: column;}
+
+}
+@media screen and (max-width:982px){
+    
+    nav ul {margin-left: 150px;}
+
+    .div1 {flex-direction: column; }
+    .leftside {border: 1px solid red; overflow: hidden; padding: 10px; height:40%; margin: 0px 15px;}
+    .mideel {border: 1px solid red; overflow: hidden; padding: 10px; height:auto; margin: 0px 15px;}
+    .rightside { border: 1px solid red; overflow: hidden; padding: 10px; height:auto; margin: 0px 15px;}
+}
+@media screen and (max-width:970px){
+    /* if media screen < 970px then what are you do! */
+    nav ul {margin-left: 20px;}
+    nav ul li {display: block; }
+    #openSidebarMenu {display: block; position: absolute; top: 10%;}
+    #openSidebarMenu {display:flex; flex-direction: column;}
+    #openSidebarMenu:checked ~ .sidebarMenu {	transform: translateX(0);		}		
+    input#openSidebarMenu{	display: none;		}
+    .sidebarIconToggle {  height: 22px;	width: 22px;	position: absolute;	z-index: 99;	top: 93%;	left: 175px;	transition: all 0.3s; 			cursor: pointer; 	}
+    .spinner {	height: 3px;	background-color: #fff;	transition: all 0.3s;	/*position: absolute; top:50%; float: left; margin-left: 170px;*/}
+    .spinner.middle , .spinner.bottom{	margin-top: 3px;		}
+    #openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.middle {	opacity: 0;		}
+    #openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.top {	transform: rotate(135deg);	margin-top: 8px;	}
+    #openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.bottom {	transform: rotate(-135deg);	margin-top: -9px;	} 
+
+
+    footer {flex-direction: column; justify-content: center; flex-wrap: nowrap;}
+    .footer1 {width: 100%;}
+    .footer2 {width: auto;}
+}
+
+@media screen and (max-width:700px){
+    /* if media screen < 430px then do! (this is Tablet screen ) */
+
+}
+
+@media screen and (max-width:430px){
+    /* if media screen < 430px then do! (this is mobile screen ) */
+
+}

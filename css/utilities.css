@@ -1,0 +1,27 @@
+:root{	--dark: #f8f6f6;	--light: rgba(8, 8, 8, 0.849);
+	/* HOW TO USE THIS COLOR CODE open css file and type 
+		exampal : background-color : var(--dark); color : var(--light);
+
+	How to import utilities.css file in style.css file 
+	 	type in style.css file in :
+		@import 'utilities.css';
+	*/
+}
+@font-face { font-family: VariableFont; src: url('../fonts/VariableFont.ttf'); }
+	
+*{
+		margin:0;
+		padding:0;
+		box-sizing: border-box;
+		font-family: 'Poppins', sans-serif, arial ;
+}
+body {
+		background-color : white!important; 
+		color : rgb(240, 229, 229)!important;
+		text-align:center;
+		 
+}
+a {text-decoration: none;}
+	
+	
+	

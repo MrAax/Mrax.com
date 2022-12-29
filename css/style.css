@@ -1,0 +1,134 @@
+@import 'utilities.css';
+@import 'all.css';
+@import 'media_screen.css';
+
+header{
+	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/1.jpg); height:100vh; width:100%; background-size: cover; background-position: center; 
+    /* background: linear-gradient(57deg, #00c6a7, #1e4d92); */
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%); } */ 
+}
+#menu {height: auto;display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; position: relative; top: 10%; left: 2%; }
+
+.logo {position: absolute; left: 1%;}
+.logo a {cursor: pointer; font-size: 25px;font-family: VariableFont; justify-content: center;}
+.logo a:hover {background: linear-gradient(57deg, #00c6a7, #1e4d92);}
+#openSidebarMenu {display: none;}
+.navigtionBar { position:absolute; top: 10%; left: 0px; }
+.navigtionBar nav {width:100%; }
+nav ul {position:absolute;  float: left; margin-left: 170px;list-style-type:none; position: sticky; top: 0%;}
+nav ul li {display: inline-block; justify-content: center;}
+nav ul li a {text-decoration:none; color:rgba(228, 215, 215, 0.856); padding:5px 20px; border:1px solid transparent; transition: 0.6s ease; }
+nav ul li a:hover {color:rgb(31, 28, 29);  }
+nav ul li.active a {color:rgb(255, 255, 255); }
+
+
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: flex-start;
+    justify-content: space-evenly; */
+
+}
+#container1 {display: flex; flex-direction: column;  }
+.side-div { 
+    background-color: cadetblue;
+    color: white;
+}
+.main-div {
+    background-color: black; 
+    color: white;
+}
+.right-div { 
+    background-color: darkcyan; 
+    color: white;
+}
+
+.div1 {background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/gif1.gif);
+	height:500px; width:100%; background-size: cover; background-position: center; 
+    display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: center; 
+}
+.leftside {border: 1px solid red; overflow: hidden; padding: 10px; height:auto; margin: 20px 15px;}
+.leftside div h4 {padding: 10px 5px; }
+#answer-ol {display: flex; flex-direction: column; padding: 25px; }
+
+button {font-size: 17px; font-weight: 600; color: white;
+     background: linear-gradient(135deg, rgb(146, 33, 33), rgb(35, 203, 233)); border-radius: 4px; padding: 5px 15px; border:1px solid transparent; transition: 0.6s ease-in-out; }
+button:hover { border: 1px solid rgb(238, 137, 150); background: linear-gradient(70deg,  rgb(192, 21, 64), rgb(20, 176, 197));}
+
+.mideel {border: 1px solid red; overflow: hidden; padding: 10px; height:auto; margin: 20px 15px;}
+.mideel div h4 {padding: 10px 5px; }
+#answer-ol {display: flex; flex-direction: column; }
+
+.rightside { border: 1px solid red; overflow: hidden; padding: 10px; height:auto; margin: 20px 15px;}
+.rightside div h4 {padding: 10px 5px; }
+#answer-ol {display: flex; flex-direction: column; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.div2 {background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/6.jpg);
+     height:100vh; width:100%; background-size: cover; background-position: center;}
+
+.div3 {background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/7.jpg);
+      height:100vh; width:100%; background-size: cover; background-position: center;}
+
+.div4 {background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/8.jpg);
+    height:100vh; width:100%; background-size: cover; background-position: center;}
+
+.div5 {background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/9.jpg);
+    height:100vh; width:100%; background-size: cover; background-position: center;}
+
+.div6 {background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/10.jpg);
+     height:100vh; width:100%; background-size: cover; background-position: center;}
+
+     
+footer {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 1%;
+    
+}
+.footer1 {width: 33%;}
+.footer1 ul {float:left; list-style-type:none;}
+.footer1 li {display: inline-block;}
+.footer1 li a {text-decoration: none;padding:5px 20px; border:1px solid transparent; transition: 0.6s ease;}
+
+.footer2 {width: auto;}
+.footer2 ul {float:right; list-style-type:none;}
+.footer2 ul:last-child {padding-right: 40px;}
+.footer2 ul li {display: inline-block;}
+.footer2 ul li a {text-decoration: none; padding:5px 20px; border:1px solid transparent; transition: 0.6s ease;}
+.footer2 ul li a:hover {color:rgb(233, 20, 91);  }
