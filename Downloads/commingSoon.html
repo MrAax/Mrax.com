@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downloads list</title>
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif !important;
+    user-select: none !important;
+    -moz-user-select: none !important;
+    -webkit-user-select: none !important;
+    -ms-user-select: none !important;
+}
+a{text-decoration: none;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url('../images/leptop.jpg') center center;
+    background-size: cover;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.title {
+    margin-top: 10px;
+    color: white !important;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.col {
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.col div {
+    width: 250px;
+    text-align: center;
+}
+
+input {
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: transparent;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="overlay">
+            <div class="title">We are comming soon </div>
+            <h3 class="title" id="end-date">20 March 2023 10:00 PM</h3>
+            <div class="col">
+                <div>
+                    <input type="text" value="0" readonly>
+                    <label for="">Days</label>
+                </div>
+                <div>
+                    <input type="text" value="0" readonly>
+                    <label for="">Hours</label>
+                </div>
+                <div>
+                    <input type="text" value="0" readonly>
+                    <label for="">Minutes</label>
+                </div>
+                <div>
+                    <input type="text" value="0" readonly>
+                    <label for="">Seconds</label>
+                </div>
+            </div>
+            
+            <div>
+                <div class="title"> Curent Date is </div>
+                <h3 class="title" id="curent-date"></h3>
+            </div>
+        </div>
+    </div>
+        <!-- <script src="./js/custem.js"></script> -->
+        <script>
+            const endDate = "28 February 2023 12:00 AM"
+
+document.getElementById("end-date").innerText = endDate;
+const inputs = document.querySelectorAll("input")
+//const clock = () => {
+
+//}
+function curentDate(){
+    document.getElementById("curent-date").innerText = new Date;
+
+}
+function clock() {
+    const end = new Date(endDate)
+    const now = new Date() // curent date
+    const diff = ((end - now) / 1000);
+    if (diff < 0) return;
+    inputs[0].value = Math.floor(diff / 3600 / 24); // Days calulete
+    inputs[1].value = Math.floor(diff / 3600) % 24; // Hours calulete
+    inputs[2].value = Math.floor(diff / 60) % 60;   // Minutes calulete
+    inputs[3].value = Math.floor(diff) % 60;    // Seconds calulete
+    
+
+}
+
+/**
+ *  1 day = 24 hrs
+ *  1 hr = 60 mins
+ *  60 min = 3600 sec
+ */
+setInterval(
+    () => {
+        clock()
+        curentDate()
+    },
+    1000
+)
+
+document.querySelector('html').addEventListener('contextmenu',disableRightClick);
+document.querySelector('body').addEventListener('contextmenu', disableRightClick);
+document.addEventListener('contextmenu', disableRightClick);
+
+function disableRightClick(e) {
+    e.preventDefault();
+}
+setInterval(
+    () => {
+        disableRightClick()
+    },
+    1000
+)
+        </script>
+</body>
+</html>
