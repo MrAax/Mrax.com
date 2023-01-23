@@ -127,3 +127,19 @@ function topFunction() {
 } 
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// disable user mouse right click 
+document.querySelector('html').addEventListener('contextmenu',disableRightClick);
+document.querySelector('body').addEventListener('contextmenu', disableRightClick);
+document.addEventListener('contextmenu', disableRightClick);
+
+function disableRightClick(e) {
+    e.preventDefault();
+}
+setInterval(
+    () => {
+        disableRightClick()
+    },
+    1000
+)
+
