@@ -1,8 +1,8 @@
 #python -m pip install --upgrade pip
 #pip install cryptography
-#from cryptography.fernet import Fernet
-#key = Fernet.generate_key()
-#cript = Fernet(key)
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+cript = Fernet(key)
 
 def encryptFun():
     with open('validate.txt', 'rb+') as file:
@@ -19,9 +19,10 @@ def decryptFun():
         file.close()
     
 def expirApp():
-    print('The trale pread is expired')
+    print('Your tryle period is expired')
 
 def mainFun():
+    decryptFun()
     with open('validate.txt', 'r+') as file:
         data = file.readline()
         try:
@@ -29,6 +30,7 @@ def mainFun():
                 file.seek(0)
                 file.write(str(int(data)-1))
                 file.close()
+                encryptFun()
             else:
                 expirApp()
         except ValueError:
